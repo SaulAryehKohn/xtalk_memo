@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_4) (preloaded format=pdflatex 2014.11.28)  26 JUL 2015 18:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/MacPorts 2014_4) (preloaded format=pdflatex 2014.11.28)  30 JUL 2015 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -343,18 +343,18 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 (./xtalkmemo.aux)
 \openout1 = `xtalkmemo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
 
 (/opt/local/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -417,149 +417,177 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for U+msa on input line 10.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
 (/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 10.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
 (/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+[1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 58.
+Overfull \hbox (110.12723pt too wide) detected at line 103
+[] \OMS/cmsy/m/n/9 
+ [] \OT1/cmr/m/n/9 = [] = ([][] \OMS/cmsy/m/n/9 
+ [][]\OT1/cmr/m/n/9 ) + ([][] \OMS/cmsy/m/n/9 
+ [][]\OT1/cmr/m/n/9 ) + ([][] \OMS/cmsy/m/n/9 
+ [][]\OT1/cmr/m/n/9 ) + ([][] \OMS/cmsy/m/n/9 
+ [][]\OT1/cmr/m/n/9 )
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 115.
 
 (/opt/local/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <9> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
-
-Underfull \hbox (badness 10000) in paragraph at lines 66--67
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
+ [2]
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-<6250_C.png, id=19, 578.16pt x 433.62pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
+<6250_C.png, id=27, 578.16pt x 433.62pt>
 File: 6250_C.png Graphic file (type png)
  <use 6250_C.png>
-Package pdftex.def Info: 6250_C.png used on input line 73.
+Package pdftex.def Info: 6250_C.png used on input line 173.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<6250_C_d.png, id=21, 578.16pt x 433.62pt>
+<6250_C_d.png, id=29, 578.16pt x 433.62pt>
 File: 6250_C_d.png Graphic file (type png)
  <use 6250_C_d.png>
-Package pdftex.def Info: 6250_C_d.png used on input line 74.
+Package pdftex.def Info: 6250_C_d.png used on input line 174.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<6250_Cx.png, id=22, 578.16pt x 433.62pt>
+<6250_Cx.png, id=30, 578.16pt x 433.62pt>
 File: 6250_Cx.png Graphic file (type png)
  <use 6250_Cx.png>
-Package pdftex.def Info: 6250_Cx.png used on input line 75.
+Package pdftex.def Info: 6250_Cx.png used on input line 175.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<6250_Cx_d.png, id=23, 578.16pt x 433.62pt>
+<6250_Cx_d.png, id=31, 578.16pt x 433.62pt>
 File: 6250_Cx_d.png Graphic file (type png)
  <use 6250_Cx_d.png>
-Package pdftex.def Info: 6250_Cx_d.png used on input line 76.
+Package pdftex.def Info: 6250_Cx_d.png used on input line 176.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<6250_yy_xtalk_per_file.png, id=24, 578.16pt x 433.62pt>
+<6250_yy_xtalk_per_file.png, id=32, 578.16pt x 433.62pt>
 File: 6250_yy_xtalk_per_file.png Graphic file (type png)
 
 <use 6250_yy_xtalk_per_file.png>
-Package pdftex.def Info: 6250_yy_xtalk_per_file.png used on input line 83.
+Package pdftex.def Info: 6250_yy_xtalk_per_file.png used on input line 183.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<6250_yy_xtalk_that_night.png, id=25, 578.16pt x 433.62pt>
+<6250_yy_xtalk_that_night.png, id=33, 578.16pt x 433.62pt>
 File: 6250_yy_xtalk_that_night.png Graphic file (type png)
 
 <use 6250_yy_xtalk_that_night.png>
-Package pdftex.def Info: 6250_yy_xtalk_that_night.png used on input line 84.
+Package pdftex.def Info: 6250_yy_xtalk_that_night.png used on input line 184.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<6250_yy_xtalk_that_night_BLtype1_d.png, id=26, 578.16pt x 433.62pt>
+<6250_yy_xtalk_that_night_BLtype1_d.png, id=34, 578.16pt x 433.62pt>
 File: 6250_yy_xtalk_that_night_BLtype1_d.png Graphic file (type png)
 
 <use 6250_yy_xtalk_that_night_BLtype1_d.png>
 Package pdftex.def Info: 6250_yy_xtalk_that_night_BLtype1_d.png used on input l
-ine 91.
+ine 191.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<6250_yy_xtalk_that_night_BLtype1_median_d.png, id=27, 578.16pt x 433.62pt>
+<6250_yy_xtalk_that_night_BLtype1_median_d.png, id=35, 578.16pt x 433.62pt>
 File: 6250_yy_xtalk_that_night_BLtype1_median_d.png Graphic file (type png)
 
 <use 6250_yy_xtalk_that_night_BLtype1_median_d.png>
 Package pdftex.def Info: 6250_yy_xtalk_that_night_BLtype1_median_d.png used on 
-input line 92.
+input line 192.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<xx_1unit_xtalk_d.png, id=28, 578.16pt x 433.62pt>
+<xx_1unit_xtalk_d.png, id=36, 578.16pt x 433.62pt>
 File: xx_1unit_xtalk_d.png Graphic file (type png)
  <use xx_1unit_xtalk_d.png>
-Package pdftex.def Info: xx_1unit_xtalk_d.png used on input line 99.
+Package pdftex.def Info: xx_1unit_xtalk_d.png used on input line 199.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<xx_2unit_xtalk_d.png, id=29, 578.16pt x 433.62pt>
+<xx_2unit_xtalk_d.png, id=37, 578.16pt x 433.62pt>
 File: xx_2unit_xtalk_d.png Graphic file (type png)
  <use xx_2unit_xtalk_d.png>
-Package pdftex.def Info: xx_2unit_xtalk_d.png used on input line 100.
+Package pdftex.def Info: xx_2unit_xtalk_d.png used on input line 200.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<xx_3unit_xtalk_d.png, id=30, 578.16pt x 433.62pt>
+<xx_3unit_xtalk_d.png, id=38, 578.16pt x 433.62pt>
 File: xx_3unit_xtalk_d.png Graphic file (type png)
  <use xx_3unit_xtalk_d.png>
-Package pdftex.def Info: xx_3unit_xtalk_d.png used on input line 101.
+Package pdftex.def Info: xx_3unit_xtalk_d.png used on input line 201.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-<xx_4unit_xtalk_d.png, id=31, 578.16pt x 433.62pt>
+<xx_4unit_xtalk_d.png, id=39, 578.16pt x 433.62pt>
 File: xx_4unit_xtalk_d.png Graphic file (type png)
  <use xx_4unit_xtalk_d.png>
-Package pdftex.def Info: xx_4unit_xtalk_d.png used on input line 102.
+Package pdftex.def Info: xx_4unit_xtalk_d.png used on input line 202.
 (pdftex.def)             Requested size: 137.9979pt x 103.49529pt.
 
-[2] [3 <./6250_C.png> <./6250_C_d.png> <./6250_Cx.png> <./6250_Cx_d.png> <./625
-0_yy_xtalk_per_file.png> <./6250_yy_xtalk_that_night.png>] [4 <./6250_yy_xtalk_
+Underfull \hbox (badness 10000) in paragraph at lines 207--209
+
+ []
+
+
+Overfull \hbox (3.45992pt too wide) in paragraph at lines 215--216
+\OT1/cmr/m/n/9 NEED FIG-URE) which will throw a span-ner in the works for imagi
+ng-
+ []
+
+[3] [4 <./6250_C.png> <./6250_C_d.png> <./6250_Cx.png> <./6250_Cx_d.png> <./625
+0_yy_xtalk_per_file.png> <./6250_yy_xtalk_that_night.png>] [5 <./6250_yy_xtalk_
 that_night_BLtype1_d.png> <./6250_yy_xtalk_that_night_BLtype1_median_d.png> <./
 xx_1unit_xtalk_d.png> <./xx_2unit_xtalk_d.png> <./xx_3unit_xtalk_d.png> <./xx_4
-unit_xtalk_d.png>] [5] (./xtalkmemo.aux)
+unit_xtalk_d.png>] (./xtalkmemo.bbl) [6] (./xtalkmemo.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 2682 strings out of 494213
- 35191 string characters out of 6157462
- 96023 words of memory out of 5000000
- 5913 multiletter control sequences out of 15000+600000
- 13739 words of font info for 53 fonts, out of 8000000 for 9000
+ 2711 strings out of 494213
+ 35559 string characters out of 6157462
+ 98155 words of memory out of 5000000
+ 5931 multiletter control sequences out of 15000+600000
+ 16193 words of font info for 61 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 37i,13n,24p,527b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,13n,24p,854b,296s stack positions out of 5000i,500n,10000p,200000b,80000s
 </opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></o
 pt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx9.pfb></opt/loc
-al/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/sh
-are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/local/share/te
-xmf-texlive/fonts/type1/public/amsfonts/cm/cmmi9.pfb></opt/local/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texlive/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></opt/local/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmr17.pfb></opt/local/share/texmf-texlive/fonts/type1/
-public/amsfonts/cm/cmr6.pfb></opt/local/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmr8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmr9.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
-sy6.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></op
-t/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/loc
-al/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on xtalkmemo.pdf (5 pages, 1449577 bytes).
+al/share/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></opt/loca
+l/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/sha
+re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></opt/local/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></opt/local/share/texmf-tex
+live/fonts/type1/public/amsfonts/cm/cmmi9.pfb></opt/local/share/texmf-texlive/f
+onts/type1/public/amsfonts/cmextra/cmmib6.pfb></opt/local/share/texmf-texlive/f
+onts/type1/public/amsfonts/cmextra/cmmib9.pfb></opt/local/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texlive/fonts/t
+ype1/public/amsfonts/cm/cmr12.pfb></opt/local/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></opt/local/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cm
+r9.pfb></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></opt/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></opt
+/local/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy9.pfb></opt/local
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></opt/local/shar
+e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on xtalkmemo.pdf (6 pages, 1488783 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
