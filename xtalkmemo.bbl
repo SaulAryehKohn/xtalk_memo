@@ -1,8 +1,44 @@
-\begin{thebibliography}{TMS86}
+\begin{thebibliography}{1}
 
-\bibitem[TMS86]{TMS}
+\bibitem{Parsons}
+A.~R. {Parsons}, J.~C. {Pober}, J.~E. {Aguirre}, C.~L. {Carilli}, D.~C.
+  {Jacobs}, and D.~F. {Moore}.
+\newblock {A Per-baseline, Delay-spectrum Technique for Accessing the 21 cm
+  Cosmic Reionization Signature}.
+\newblock {\em ApJ}, 756:165, September 2012.
+
+\bibitem{Sullivan}
+I.~S. {Sullivan}, M.~F. {Morales}, B.~J. {Hazelton}, W.~{Arcus}, D.~{Barnes},
+  G.~{Bernardi}, F.~H. {Briggs}, J.~D. {Bowman}, J.~D. {Bunton}, R.~J.
+  {Cappallo}, B.~E. {Corey}, A.~{Deshpande}, L.~{deSouza}, D.~{Emrich}, B.~M.
+  {Gaensler}, R.~{Goeke}, L.~J. {Greenhill}, D.~{Herne}, J.~N. {Hewitt},
+  M.~{Johnston-Hollitt}, D.~L. {Kaplan}, J.~C. {Kasper}, B.~B. {Kincaid},
+  R.~{Koenig}, E.~{Kratzenberg}, C.~J. {Lonsdale}, M.~J. {Lynch}, S.~R.
+  {McWhirter}, D.~A. {Mitchell}, E.~{Morgan}, D.~{Oberoi}, S.~M. {Ord},
+  J.~{Pathikulangara}, T.~{Prabu}, R.~A. {Remillard}, A.~E.~E. {Rogers},
+  A.~{Roshi}, J.~E. {Salah}, R.~J. {Sault}, N.~{Udaya Shankar}, K.~S.
+  {Srivani}, J.~{Stevens}, R.~{Subrahmanyan}, S.~J. {Tingay}, R.~B. {Wayth},
+  M.~{Waterson}, R.~L. {Webster}, A.~R. {Whitney}, A.~{Williams}, C.~L.
+  {Williams}, and J.~S.~B. {Wyithe}.
+\newblock {Fast Holographic Deconvolution: A New Technique for Precision Radio
+  Interferometry}.
+\newblock {\em ApJ}, 759:17, November 2012.
+
+\bibitem{TMS}
 A.~R. {Thompson}, J.~M. {Moran}, and G.~W. {Swenson}.
 \newblock {\em {Interferometry and synthesis in radio astronomy}}.
 \newblock 1986.
+
+\bibitem{Zheng}
+H.~{Zheng}, M.~{Tegmark}, V.~{Buza}, J.~S. {Dillon}, H.~{Gharibyan},
+  J.~{Hickish}, E.~{Kunz}, A.~{Liu}, J.~{Losh}, A.~{Lutomirski}, S.~{Morrison},
+  S.~{Narayanan}, A.~{Perko}, D.~{Rosner}, N.~{Sanchez}, K.~{Schutz}, S.~M.
+  {Tribiano}, M.~{Valdez}, H.~{Yang}, K.~Z. {Adami}, I.~{Zelko}, K.~{Zheng},
+  R.~P. {Armstrong}, R.~F. {Bradley}, M.~R. {Dexter}, A.~{Ewall-Wice},
+  A.~{Magro}, M.~{Matejek}, E.~{Morgan}, A.~R. {Neben}, Q.~{Pan}, R.~F.
+  {Penna}, C.~M. {Peterson}, M.~{Su}, J.~{Villasenor}, C.~L. {Williams}, and
+  Y.~{Zhu}.
+\newblock {MITEoR: a scalable interferometer for precision 21 cm cosmology}.
+\newblock {\em MNRAS}, 445:1084--1103, December 2014.
 
 \end{thebibliography}

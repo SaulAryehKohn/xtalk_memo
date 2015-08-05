@@ -210,6 +210,7 @@ D^y_{m}\\
 D^{x*}_{n}\\
 D^{x*}_{yn}\\
 \end{pmatrix}
+\label{eq:Dterms3times}
 \end{equation}
 
 \subsection{Measuring individual reflections}
@@ -226,8 +227,8 @@ In Figure~\ref{fig:xtalk-per-file}, we show the average visibility on a fiducial
 \begin{figure}
 \centering
 \includegraphics[width=0.4\textwidth]{6250_yy_xtalk_per_file.png}
-\includegraphics[width=0.4\textwidth]{6250_yy_xtalk_that_night.png}
-\caption{\textit{Left}: The average $YY$ visibility for a 30\,m baseline of each 10 minute file over the night, plus a constant offset for display purposes. The average of the first file is at the top, and file time progresses downwards. \textit{Right}: The average of these signals (i.e. average for the night).}
+\includegraphics[width=0.4\textwidth]{mean_xtalk_all_1unit_BLs_6250.png}
+\caption{\textit{Left}: The average $YY$ (absolute-value) visibility for a single 30\,m baseline of each 10 minute file over the night, plus a constant offset for display purposes. The average of the first file is at the top, and file time progresses downwards. \textit{Right}: The time-averaged visibility for that baseline over the night.}
 \label{fig:xtalk-per-file}
 \end{figure}
 
@@ -275,7 +276,50 @@ XXX NEED THE CONVERSION FROM NANOSECONDS TO K-SPACE TO SEE IF THIS MIGHT CONTRIB
 
 \subsection{D-terms}
 
-XXX RIDHIMA PLOTS: PICTOR FIELD BEFORE AND AFTER D TERMS ON COMMON FLUX SCALE\\
+Using the PAPER-32 polarized imaging array data from JD2455819, we used crosstalk-subtracted $X'X'$, $X'Y'$, $Y'X'$ and $Y'Y'$ visibilities, ported into CASA, to make images, averaging over all frequencies to boost signal-to-noise. Stokes images were formed by combining images according to:
+
+\begin{equation}
+\begin{pmatrix}
+I' \\
+Q' \\
+U' \\
+V' \\
+\end{pmatrix}
+=\frac{1}{2}
+\begin{pmatrix}
+1 & 0 & 0 & 1 \\
+-1& 0 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+0 & i & -i & 0 \\
+\end{pmatrix}
+\begin{pmatrix}
+X'X' \\
+X'Y' \\
+Y'X' \\
+Y'Y' \\
+\end{pmatrix}
+\end{equation}
+
+Within this night, Pictor A transited close to zenith, and we used three integrations closets to transit (minimizing wide-field effects). At each integration, the flux of Pictor A was measured in $I'$, $U'$ and $V'$ to form the $\delta$ parameters. We used these to calculate the D-terms as described in Equation~\ref{eq:Dterms3times}.\\  
+
+XXX The results of this experiment were:\\
+\begin{align*}
+XXX\\
+XXX\\
+XXX\\
+XXX
+\end{align*}
+
+Using these values, we could correct for D-term leakage in the image plane:
+\begin{equation}
+U = U' - \delta_{+-}I'
+\end{equation}
+\begin{equation}
+V = V' - \delta_{-+}I'
+\end{equation}
+
+
+XXX IMAGES, SOME INTERPRETATION 
 
 \section{Discussion \& Conclusions}
 \label{sec:conc}
@@ -290,10 +334,11 @@ XXX RIDHIMA PLOTS: PICTOR FIELD BEFORE AND AFTER D TERMS ON COMMON FLUX SCALE\\
 
 \subsection{Implications for HERA}
 
-Using the formalism laid-out at the start of this memo, we hope to move forward with a common language for the collaboration to talk about crosstalk. Additions are of course welcome. We have also presented a technique for measuring crosstalk (which is being implemented for the polarized PAPER-64 power spectrum analyses and all of the PAPER-128 analyses), and shown the expected delay spectra in the presence of strong reflections. 
+Using the formalism laid-out at the start of this memo, we hope to move forward with a common language for the collaboration to talk about crosstalk. Additions are of course welcome. We have also presented a technique for measuring crosstalk (which is being implemented for the polarized PAPER-64 power spectrum analyses and all of the PAPER-128 analyses), and shown the expected delay spectra in the presence of strong reflections. The simple method presented in this memo for calculating D-term leakage is a strong motivator for regularly imaging in four polarizations.
 
 HERA-19, now under construction in South Africa, and HERA-GB, 3 dish prototypes in Green Bank, WV, are based on design choices drawing from lessons learned from PAPER, MWA and OMNISCOPE. Different crosstalk mitigation strategies will be tested -- primarily with HERA-GB -- such as erecting `fences' around the rim of each HERA dish.
 Given the points above, particular care and attention should be given to the characteristics of average visibilities in delay-space with and without crosstalk mitigation.
+
 
 \bibliographystyle{plain}
 \bibliography{xtalkmemoBib}
