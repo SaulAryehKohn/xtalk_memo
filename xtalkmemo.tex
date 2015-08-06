@@ -6,19 +6,22 @@
 \usepackage{graphicx}
 \usepackage[margin=0.5in]{geometry}
 \setlength\parindent{0pt}
-\title{Crosstalk measurements from PAPER}
-\author{Saul A. Kohn$^1$\thanks{saulkohn@sas.upenn.edu}\,\,\,, James E. Aguirre$^1$ \,\,\,\& Chuneeta D. Nunhokee$^{1,2}$\\
-$^1$\small{University of Pennsylvania}\\
-$^2$\small{Rhodes University} }
+\title{Crosstalk measurements from PAPER-64}
+\author{Saul A. Kohn\thanks{saulkohn@sas.upenn.edu}\,\,\,\& James E. Aguirre \\
+\small{University of Pennsylvania}\\ }
 \begin{document}
 \maketitle
 
-\abstract{Crosstalk is artificial signal created by an interferometer that contaminates the astronomical visibilities it is built to measure. We present extremely compelling evidence that the dominant source of crosstalk for PAPER-64 is reflections between antenna pairs, demonstrating a $1/R^2$ dependence for antenna-separation $R$. Some crosstalk is seen in excess of this trend, and may be due to crosstalk between dipole arms on individual antennae. Under the assumption of identical feeds, we provide the first imaging-based measurements of dipole-arm crosstalk using images from the PAPER-32 imaging configuration. Natural extensions of this work are a full modelling of reflections throughout the array, a more detailed, visibility-based analysis of leakage between dipole arms, and a more complete treatment of polarization calibration.}
+\abstract{Crosstalk is artificial signal created by an interferometer that contaminates the astronomical visibilities it is built to measure. We present extremely compelling evidence that the dominant source of crosstalk for PAPER-64 is reflections between antenna pairs, demonstrating a $1/R^2$ dependence for antenna-separation $R$. Some crosstalk is seen in excess of this trend, and may be due to crosstalk between dipole arms on individual antennae. 
+%Under the assumption of identical feeds, we provide the first imaging-based measurements of dipole-arm crosstalk using images from the PAPER-32 imaging configuration. 
+Natural extensions of this work are a full modelling of reflections throughout the array, a visibility-based analysis of leakage between dipole arms, and a more complete treatment of polarization calibration.}
 
 \section{Introduction \& Theory}
 \label{sec:intro}
-XXX Define crosstalk.\\
-In this memo, we describe measurements of crosstalk in data from the PAPER-64 EoR observation season and the PAPER-32 polarized-imaging configuration. The former allows us to quantify the effect of total crosstalk on PAPER's standard measurements (which we will show is largely dependent on the antenna configuration), while the latter allows us to probe electronic defects.\\
+Cross-talk is an effect in which signals from one antenna are picked up by an adjacent antenna, causing an erroneous correlation. This effect is important at low frequencies in compact configurations.
+In this memo, we describe measurements of crosstalk in data from the PAPER-64 EoR observation season. We quantify the effect of total crosstalk on PAPER's standard measurements, which we will show is largely dependent on the antenna configuration.
+%and the PAPER-32 polarized-imaging configuration. 
+%The former allows us to quantify the effect of total crosstalk on PAPER's standard measurements (which we will show is largely dependent on the antenna configuration), while the latter allows us to probe electronic defects.\\
 
 In this section, we introduce a mathematical model of crosstalk. We outline our measurement techniques in Section~\ref{sec:method}, and present our measurements in Section~\ref{sec:results}. We discuss the implications of our results and conclude in Section~\ref{sec:conc}.
 
@@ -35,11 +38,11 @@ Y'_m = Y_m + D^y_mX_m
 X'_mX'_n = X_mX_n + D^x_mY_mX_n + D^x_nX_mY_n  + \mathcal{O}(D^2)
 \label{eq:XX_leakage}
 \end{equation}
-\noindent Which is negligible compared to the $XX$ signal. However, this \textit{polarized leakage} is symmetric, causing $XX$ to leak into $XY$:
+\noindent Which is negligible compared to the $XX$ signal. However, this \textit{polarized leakage} is symmetric, causing $XX$ and $YY$ to leak into $XY$:
 \begin{equation}
 X'_mY'_n=X_mY_n + D^x_mY_mY_n + D^y_mX_nX_m + \mathcal{O}(D^2)
 \end{equation}
-\noindent This demonstrates the importance of trying to remove crosstalk when making measurements of polarization -- they will be completely overpowered by the $XX$ and $YY$ terms otherwise.
+\noindent This demonstrates the importance of trying to remove crosstalk when making measurements of polarization -- the cross-polarizations will be completely overpowered by the $XX$ and $YY$ terms otherwise.
 
 \subsection{Reflection crosstalk}
 \label{subsec:theory_reflection}
@@ -170,59 +173,21 @@ Using this constant-over-time model, we proceed with a number of steps to constr
 \label{fig:waterfalls}
 \end{figure}
 
-\subsection{Measuring dipole-arm leakage}
-\label{subsec:method_dterms}
-The leakage between dipole arms is not configuration dependent. Under the assumption of identical feeds, we can proceed with an imaging-based calibration of the leakage terms using the PAPER-32 polarized imaging configuration following Equations~(4.63) and (4.64) of TMS \cite{TMS}. Assuming Pictor A to be an unpolarized point source, we can make observed $I'$, $Q'$, $U'$ and $V'$ Stokes images of the source at different times, weighting by the beam appropriately.  \\
-
-It follows that the parameters:
-
-\begin{equation}
-\delta_{+-} = D^x_m - D^y_m + D^{x*}_n - D^{y*}_n = 2\frac{U'}{I'}
-\end{equation}
-
-\begin{equation}
-\delta_{-+} = D^x_m + D^y_m - D^{x*}_n - D^{y*}_n = -2\frac{V'}{I'}
-\end{equation}
-
-\noindent Which allows us to least-squares solve for the $D$-terms with three observations of the unpolarized source using the formulation:
-
-\begin{equation}
-\begin{pmatrix}
-\delta_{+-,1} \\
-\delta_{-+,1} \\
-\delta_{+-,2} \\
-\delta_{-+,2} \\
-\delta_{+-,3} \\
-\delta_{-+,3} \\
-\end{pmatrix}
-=
-\begin{pmatrix}
-1 & -1 & 1 & -1 \\
-1 & 1 & -1 & -1 \\
-1 & -1 & 1 & -1 \\
-1 & 1 & -1 & -1 \\
-1 & -1 & 1 & -1 \\
-1 & 1 & -1 & -1 \\
-\end{pmatrix}
-\begin{pmatrix}
-D^x_{m}\\
-D^y_{m}\\
-D^{x*}_{n}\\
-D^{x*}_{yn}\\
-\end{pmatrix}
-\label{eq:Dterms3times}
-\end{equation}
+\subsection{Measuring dipole-arm crosstalk}
+The leakage between dipole arms is not configuration dependent. Under the assumption of identical feeds, one can proceed to solve for D-terms using a image-based method with Stokes $I$, $Q$, $U$ and $V$. This measurement involves a more complete treatment of Jones matrices, parallactic angle rotation of bright sources  and widefield beam effects, and will be presented in its own memo (Nunhokee et al. HERA memo in prep).
 
 \subsection{Measuring individual reflections}
 \label{subsec:method_reflections}
 
-Measuring reflections independent of total crosstalk is a difficult endeavour, outside the scope of this memo. Since the $\epsilon^{pq}_{ij}$ values are coupled to autocorrelations throughout the array, one needs to model each dipole `broadcasting' a fraction of its autocorrelation to every other antenna. If we consider the case of no D-term leakage, as written in Equation~\ref{eq:XX_reflection}, we see that even in the limit of autocorrelations being unaffected by crosstalk (i.e. $X'_mX'_m=X_mX_m$) there are still 3 unknown parameters per visibility: the `true' visibility $X_mX_n$, $\epsilon^{xx}_{mn}$ and $\epsilon^{xy}_{mn}$. This crosstalk will technically vary on the timescale of a single autocorrelation, so it is difficult to argue for the least-squares technique used to solve for the D-terms, which assumes couplings that are constant in time.
+Measuring reflections independent of total crosstalk is a difficult endeavour, outside the scope of this memo. Since the $\epsilon^{pq}_{ij}$ values are coupled to autocorrelations throughout the array, one needs to model each dipole `broadcasting' a fraction of its autocorrelation to every other antenna. If we consider the case of no D-term leakage, as written in Equation~\ref{eq:XX_reflection}, we see that even in the limit of autocorrelations being unaffected by crosstalk (i.e. $X'_mX'_m=X_mX_m$) there are still 3 unknown parameters per visibility: the `true' visibility $X_mX_n$, $\epsilon^{xx}_{mn}$ and $\epsilon^{xy}_{mn}$. 
+This crosstalk will technically vary on the timescale of a single autocorrelation, so it is difficult to argue for a least-squares technique, which assumes couplings that are constant in time.
 
 \section{Results}
 \label{sec:results}
 
 \subsection{Total crosstalk}
-In Figure~\ref{fig:xtalk-per-file}, we show the average visibility on a fiducial 30\,m baseline for each 10 minute integration (left) and the total average (right) over JD2456250. Close to the start of the observation season, the Galaxy is not present in this data. Sunset can be seen, with much larger average visibilities at the start of the night (top; note that the sun is technically below the horizon at this time). The dip at 137\,MHz is the always-flagged ORBCOMM satellite band. The flat lines on both ends of the spectrum are the always-flagged band edges. Note that the total crosstalk in any given integration appears to be roughly constant, but that it does change in profile throughout the night. In the night-average profile, it is interesting to note that the lowest points in the spectrum ($\sim150-175$\,MHz) roughly corresponds to the quietest part of the band in terms of RFI (Kohn et al. HERA memo in prep.). This data has already been RFI-flagged twice, once in high and once in low spectral resolution. \\
+In Figure~\ref{fig:xtalk-per-file}, we show the average visibility on a fiducial 30\,m baseline for each 10 minute integration (left) and the total average (right) over JD2456250. Close to the start of the observation season, the Galaxy is not present in this data. Sunset can be seen, with much larger average visibilities at the start of the night (top; note that the sun is technically below the horizon at this time). The dip at 137\,MHz is the always-flagged ORBCOMM satellite band. The flat lines on both ends of the spectrum are the always-flagged band edges. Note that the total crosstalk in any given integration appears to be roughly constant, but that it does change in profile throughout the night. %In the night-average profile, it is interesting to note that the lowest points in the spectrum ($\sim150-175$\,MHz) roughly corresponds to the quietest part of the band in terms of RFI (Kohn et al. HERA memo in prep.). 
+This data has already been RFI-flagged twice, once in high and once in low spectral resolution. \\
 
 \begin{figure}
 \centering
@@ -263,63 +228,15 @@ It is important to understand the magnitude of crosstalk compared to typical vis
 \end{equation}
 
 That is, time- and baseline-averaged visibilities weighted by their RMS over frequency at each integration, should give a measure of how much crosstalk is present at each delay. This statistic is shown in Figure~\ref{fig:xi_V}, and several interesting features are apparent. The 30\,m baselines have excess power in `wings', loosely corresponding to the 60\,m and 90\,m separations. The longer baselines may have these wings also, but at the level of noise. The noise inside the horizon on the 30\,m baselines is comparable to the total crosstalk on the 120\, baselines.
-Note that this all occurs at levels $\sim0.1-1.5\%$ of the total (foreground) signal. This means that once we have averaged backgrounds to levels 1\% of the original visibilities, reflection crosstalk will dominate and prevent further averaging-down. \\
-XXX NEED THE CONVERSION FROM NANOSECONDS TO K-SPACE TO SEE IF THIS MIGHT CONTRIBUTE TO DAMO-BUMPS\\
+Note that this all occurs at levels $\sim0.1-1.5\%$ of the total (foreground) signal. This means that once we have averaged backgrounds to levels 1\% of the original visibilities, reflection crosstalk may dominate and prevent further averaging-down. \\
 %well this looks scary
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5]{xi_V-zoom.png}
-\caption{The value of $\xi_V$ is a measure of how much total crosstalk is present in visibilities on average.}
+\caption{The value of $\xi_V$ is a measure of how much total crosstalk is present in visibilities on average. The 30\,m baselines exhibit relatively large amounts of signal `ringing' outside of the horizon (shown as dotted lines for each unit-spacing).}
 \label{fig:xi_V}
 \end{figure}
-
-\subsection{D-terms}
-
-Using the PAPER-32 polarized imaging array data from JD2455819, we used crosstalk-subtracted $X'X'$, $X'Y'$, $Y'X'$ and $Y'Y'$ visibilities, ported into CASA, to make images, averaging over all frequencies to boost signal-to-noise. Stokes images were formed by combining images according to:
-
-\begin{equation}
-\begin{pmatrix}
-I' \\
-Q' \\
-U' \\
-V' \\
-\end{pmatrix}
-=\frac{1}{2}
-\begin{pmatrix}
-1 & 0 & 0 & 1 \\
--1& 0 & 0 & 1 \\
-0 & 1 & 1 & 0 \\
-0 & i & -i & 0 \\
-\end{pmatrix}
-\begin{pmatrix}
-X'X' \\
-X'Y' \\
-Y'X' \\
-Y'Y' \\
-\end{pmatrix}
-\end{equation}
-
-Within this night, Pictor A transited close to zenith, and we used three integrations closets to transit (minimizing wide-field effects). At each integration, the flux of Pictor A was measured in $I'$, $U'$ and $V'$ to form the $\delta$ parameters. We used these to calculate the D-terms as described in Equation~\ref{eq:Dterms3times}.\\  
-
-XXX The results of this experiment were:\\
-\begin{align*}
-XXX\\
-XXX\\
-XXX\\
-XXX
-\end{align*}
-
-Using these values, we could correct for D-term leakage in the image plane:
-\begin{equation}
-U = U' - \delta_{+-}I'
-\end{equation}
-\begin{equation}
-V = V' - \delta_{-+}I'
-\end{equation}
-
-
-XXX IMAGES, SOME INTERPRETATION 
 
 \section{Discussion \& Conclusions}
 \label{sec:conc}
@@ -334,7 +251,7 @@ XXX IMAGES, SOME INTERPRETATION
 
 \subsection{Implications for HERA}
 
-Using the formalism laid-out at the start of this memo, we hope to move forward with a common language for the collaboration to talk about crosstalk. Additions are of course welcome. We have also presented a technique for measuring crosstalk (which is being implemented for the polarized PAPER-64 power spectrum analyses and all of the PAPER-128 analyses), and shown the expected delay spectra in the presence of strong reflections. The simple method presented in this memo for calculating D-term leakage is a strong motivator for regularly imaging in four polarizations.
+Using the formalism laid-out at the start of this memo, we hope to move forward with a common language for the collaboration to talk about crosstalk. Additions are of course welcome. We have also presented a technique for measuring crosstalk (which is being implemented for the polarized PAPER-64 power spectrum analyses and all of the PAPER-128 analyses), and shown the expected delay spectra in the presence of strong reflections. %The simple method presented in this memo for calculating D-term leakage is a strong motivator for regularly imaging in four polarizations.
 
 HERA-19, now under construction in South Africa, and HERA-GB, 3 dish prototypes in Green Bank, WV, are based on design choices drawing from lessons learned from PAPER, MWA and OMNISCOPE. Different crosstalk mitigation strategies will be tested -- primarily with HERA-GB -- such as erecting `fences' around the rim of each HERA dish.
 Given the points above, particular care and attention should be given to the characteristics of average visibilities in delay-space with and without crosstalk mitigation.

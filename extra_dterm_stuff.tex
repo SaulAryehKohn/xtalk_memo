@@ -1,0 +1,89 @@
+\subsection{D-terms}
+
+Using the PAPER-32 polarized imaging array data from JD2455819, we used crosstalk-subtracted $X'X'$, $X'Y'$, $Y'X'$ and $Y'Y'$ visibilities, ported into CASA, to make images, averaging over all frequencies to boost signal-to-noise. Stokes images were formed by combining images according to:
+
+\begin{equation}
+\begin{pmatrix}
+I' \\
+Q' \\
+U' \\
+V' \\
+\end{pmatrix}
+=\frac{1}{2}
+\begin{pmatrix}
+1 & 0 & 0 & 1 \\
+-1& 0 & 0 & 1 \\
+0 & 1 & 1 & 0 \\
+0 & i & -i & 0 \\
+\end{pmatrix}
+\begin{pmatrix}
+X'X' \\
+X'Y' \\
+Y'X' \\
+Y'Y' \\
+\end{pmatrix}
+\end{equation}
+
+Within this night, Pictor A transited close to zenith, and we used three integrations closets to transit (minimizing wide-field effects). At each integration, the flux of Pictor A was measured in $I'$, $U'$ and $V'$ to form the $\delta$ parameters. We used these to calculate the D-terms as described in Equation~\ref{eq:Dterms3times}.\\  
+
+XXX The results of this experiment were:\\
+\begin{align*}
+XXX\\
+XXX\\
+XXX\\
+XXX
+\end{align*}
+
+Using these values, we could correct for D-term leakage in the image plane:
+\begin{equation}
+U = U' - \delta_{+-}I'
+\end{equation}
+\begin{equation}
+V = V' - \delta_{-+}I'
+\end{equation}
+
+
+XXX IMAGES, SOME INTERPRETATION 
+
+\subsection{Measuring dipole-arm leakage}
+\label{subsec:method_dterms}
+The leakage between dipole arms is not configuration dependent. Under the assumption of identical feeds, we can proceed with an imaging-based calibration of the leakage terms using the PAPER-32 polarized imaging configuration following Equations~(4.63) and (4.64) of TMS \cite{TMS}. Assuming Pictor A to be an unpolarized point source, we can make observed $I'$, $Q'$, $U'$ and $V'$ Stokes images of the source at different times, weighting by the beam appropriately.  \\
+
+It follows that the parameters:
+
+\begin{equation}
+\delta_{+-} = D^x_m - D^y_m + D^{x*}_n - D^{y*}_n = 2\frac{U'}{I'}
+\end{equation}
+
+\begin{equation}
+\delta_{-+} = D^x_m + D^y_m - D^{x*}_n - D^{y*}_n = -2\frac{V'}{I'}
+\end{equation}
+
+\noindent Which allows us to least-squares solve for the $D$-terms with three observations of the unpolarized source using the formulation:
+
+\begin{equation}
+\begin{pmatrix}
+\delta_{+-,1} \\
+\delta_{-+,1} \\
+\delta_{+-,2} \\
+\delta_{-+,2} \\
+\delta_{+-,3} \\
+\delta_{-+,3} \\
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & -1 & 1 & -1 \\
+1 & 1 & -1 & -1 \\
+1 & -1 & 1 & -1 \\
+1 & 1 & -1 & -1 \\
+1 & -1 & 1 & -1 \\
+1 & 1 & -1 & -1 \\
+\end{pmatrix}
+\begin{pmatrix}
+D^x_{m}\\
+D^y_{m}\\
+D^{x*}_{n}\\
+D^{x*}_{yn}\\
+\end{pmatrix}
+\label{eq:Dterms3times}
+\end{equation}
